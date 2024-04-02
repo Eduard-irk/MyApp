@@ -5,7 +5,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
 import { RouterLink } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ToastModule } from 'primeng/toast';
 import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
@@ -28,6 +28,7 @@ import { AuthService } from '../../services/auth.service';
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
+  providers: [AuthService],
 })
 export class LoginComponent {
   loginForm = this.fb.group({
