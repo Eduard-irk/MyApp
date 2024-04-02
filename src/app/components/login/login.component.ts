@@ -64,6 +64,12 @@ export class LoginComponent {
           detail: 'email or password is wrong',
         });
       }
+      () =>
+        this.msgService.add({
+          severity: 'error',
+          summary: 'Error',
+          detail: 'email or password is wrong',
+        });
     });
   }
 }
